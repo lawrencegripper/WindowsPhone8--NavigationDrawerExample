@@ -1,0 +1,53 @@
+﻿<Page
+    x:Name="page"
+    x:Class="NavigationDrawExample.ContentFrame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NavigationDrawExample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Storyboard x:Name="HidePane">
+            <DoubleAnimation Duration="0:0:1" To="-300.093" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="leftPane" d:IsOptimized="True"/>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Control.FontFamily)" Storyboard.TargetName="page">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <FontFamily>Global User Interface</FontFamily>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="ShowPane">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="leftPane">
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Control.FontFamily)" Storyboard.TargetName="page">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <FontFamily>Global User Interface</FontFamily>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <FontFamily>Global User Interface</FontFamily>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+    <Grid>
+        <Frame Name="rootFrame" />
+        <Grid x:Name="leftPane" Width="300" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Background="Black">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <Button Foreground="Pink" Content="Show/Hide" VerticalAlignment="Top" HorizontalAlignment="Right" Width="45" RenderTransformOrigin="0.5,0.5" Margin="0,0.291,-50,0" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="Button_Click">
+            </Button>
+            <Button>Example Draw Content</Button>
+        </Grid>
+        
+    </Grid>
+</Page>
