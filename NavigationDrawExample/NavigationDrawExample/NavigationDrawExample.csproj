@@ -91,11 +91,8 @@
     <Compile Include="ContentExample2.xaml.cs">
       <DependentUpon>ContentExample2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DrawControl.xaml.cs">
-      <DependentUpon>DrawControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="ContentFrame.xaml.cs">
+      <DependentUpon>ContentFrame.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,13 +122,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DrawControl.xaml">
+    <Page Include="ContentFrame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

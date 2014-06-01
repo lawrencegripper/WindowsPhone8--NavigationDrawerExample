@@ -35,5 +35,10 @@ namespace NavigationDrawExample
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            App.RootFrame.Navigate(typeof(ContentExample2));
+        }
     }
 }
