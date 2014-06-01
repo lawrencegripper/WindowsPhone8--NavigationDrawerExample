@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button Click="Button_Click">Navigate To Next Page</Button>
+    <Grid Background="Coral">
+        <Button Click="Button_Click">Go Back</Button>
     </Grid>
 </Page>

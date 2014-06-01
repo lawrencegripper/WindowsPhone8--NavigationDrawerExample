@@ -38,7 +38,7 @@ namespace NavigationDrawExample
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            App.RootFrame.Navigate(typeof(ContentExample2));
+            App.RootFrame.GoBack();
         }
     }
 }
